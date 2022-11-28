@@ -17,16 +17,19 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
                 <div class="item">
-                    <img :src="slides[activeImage].image" :alt="slides[activeImage].title"/>
+                    <!-- vuejs -->
+                    <img :src="slides[activeImage].image">
                     <div class="text">
-                        <h3>{{slides[activeImage].title}}</h3>
-                        <p>{{slides[activeImage].text}}</p>
+                        <h3> {{ slides[activeImage].title }} </h3>
+                        <p> {{ slides[activeImage].text }} </p>
                     </div>
                 </div>
 
                 <div class="thumbs">
+                    <!-- buttons -->
                     <div class="prev" @click="prevImage"></div>
                     <div class="next" @click="nextImage"></div>
+                    <!-- ciclo infinito -->
                     <div v-for="(miniature, index) in slides" class="thumb"  :class="activeImage === index ? 'active':''">
                         <img :src="miniature.image" :alt="miniature.title" />
                     </div>

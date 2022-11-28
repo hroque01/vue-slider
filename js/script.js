@@ -34,13 +34,14 @@ const { createApp } = Vue
       }
     },
     methods: {
+        // ciclo infinito next
         nextImage(){
             this.activeImage++;
             if(this.activeImage > this.slides.length - 1){
                 this.activeImage = 0;
             }
         },
-
+        // ciclo infinito prev
         prevImage(){
             this.activeImage--;
             if(this.activeImage < 0){
@@ -49,4 +50,3 @@ const { createApp } = Vue
         }
     }
 }).mount("#myApp")
-console.log(slides);
